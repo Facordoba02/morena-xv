@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Morena · Mis 15</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Italiana&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="locked">
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="resources/theme.mp3" type="audio/mpeg">
+</audio>
+
+<section class="section intro" id="intro" aria-label="Presentación">
+  <div class="intro-stage">
+    <div class="ambient-halo" aria-hidden="true"></div>
+
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+    <span class="butterfly" aria-hidden="true"></span>
+
+    <img class="envelope-mask" src="resources/mask-2.webp" alt="" aria-hidden="true">
+
+    <button class="envelope-trigger" id="envelopeButton" aria-label="Tocar para abrir invitación">
+      <div class="envelope">
+        <div class="letter" aria-hidden="true">
+          <div class="letter-kicker">Mis XV</div>
+          <div class="letter-name">Morena</div>
+          <div class="letter-divider"></div>
+          <div class="letter-phrase">Una noche donde los secretos, las máscaras y los sueños se encuentran.</div>
+          <div class="letter-date">21 de noviembre <br/> · 21:30 ·</div>
+        </div>
+
+        <div class="envelope-back"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-bottom"></div>
+        <div class="envelope-flap"></div>
+
+        <div class="seal" aria-hidden="true"></div>
+
+        <div class="tap-hint" aria-hidden="true"></div>
+      </div>
+
+      <div class="tap-label" id="tapLabel">Tocá para abrir</div>
+    </button>
+
+    <div class="music-player" aria-live="polite" aria-label="Reproductor de música">
+      <button class="music-toggle" id="musicToggle" type="button" aria-label="Reproducir música">
+        <span class="music-note" aria-hidden="true">♫</span>
+        <span class="music-pause" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7zm6 0h4v14h-4z"/></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+
+
+  <button class="arrow" id="start" aria-label="Comenzar invitación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+      <path d="M6 4l6 6 6-6"/>
+      <path d="M6 9l6 6 6-6"/>
+      <path d="M6 14l6 6 6-6"/>
+    </svg>
+  </button>
+</section>
+
+<main>
+<section class="section" id="fecha">
+  <div class="content">
+    <div class="eyebrow">Fecha y hora</div>
+    <h2 class="title">Guardá la fecha</h2>
+    <div class="orn">✦</div>
+
+    <div class="date-block">
+      <div class="bigdate">21</div>
+      <div class="month">Noviembre</div>
+      <div class="year">2026</div>
+      <div class="time">A las <strong>21:30</strong></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="lugar">
+  <div class="content">
+    <div class="eyebrow">Lugar</div>
+    <h2 class="title">El Molino Eventos</h2>
+    <div class="orn">✦</div>
+
+    <p class="address">Calle 137 N° 2524<br>Berazategui</p>
+
+    <a class="btn" id="maps" href="#" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+        <path d="M12 21s6-5.15 6-11a6 6 0 10-12 0c0 5.85 6 11 6 11z"/>
+        <circle cx="12" cy="10" r="2.2"/>
+      </svg>
+      Cómo llegar
+    </a>
+  </div>
+</section>
+
+
+<section class="section" id="asistencia">
+  <div class="content">
+    <div class="eyebrow">Asistencia</div>
+    <h2 class="title">¿Venís?</h2>
+    <div class="orn">✦</div>
+
+    <p class="copy">
+      Me encantaría compartir esta noche con vos. Respondé por WhatsApp para confirmar tu asistencia.
+    </p>
+
+    <div class="deadline">Antes del 01/11/2026</div>
+    <br>
+
+    <a class="btn" href="https://wa.me/5491122363106?text=Hola%21%20Quiero%20confirmar%20mi%20asistencia%20a%20los%2015%20de%20Morena%20el%2021%20de%20noviembre." target="_blank" rel="noopener noreferrer">
+      Confirmar
+    </a>
+  </div>
+</section>
+
+
+<section class="section" id="dresscode">
+  <div class="content">
+    <div class="eyebrow">Dress Code</div>
+    <h2 class="title">Una noche especial</h2>
+    <div class="orn">✦</div>
+
+    <div class="dress">Elegante</div>
+
+    <p class="copy">
+      Elegí tu mejor look para acompañar una noche de máscaras, sueños y celebración.
+      El color azul se reserva para la cumpleañera.
+    </p>
+
+    <img class="mask" src="resources/mask.webp" alt="Máscara" aria-hidden="true">
+  </div>
+</section>
+
+
+<section class="section" id="menu">
+  <div class="content">
+    <div class="eyebrow">Menú especial</div>
+    <h2 class="title">Queremos cuidarte</h2>
+    <div class="orn">✦</div>
+
+    <p class="copy">
+      Si tenés alguna restricción alimenticia, completá el formulario para que podamos tenerla en cuenta.
+    </p>
+
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeRRv64QVpfw7qWPbTRGaRUDtSYxPBcSSRWaI_X_sc3hsiNiQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+      Completar formulario
+    </a>
+  </div>
+</section>
+
+
+<section class="section" id="regalo">
+  <div class="content">
+    <div class="eyebrow">Regalo</div>
+    <h2 class="title">Tu presencia es el mejor regalo</h2>
+    <div class="orn">✦</div>
+
+    <p class="copy">
+      Pero si querés brindarnos algo más...
+    </p>
+
+    <div class="alias-box">
+      <span id="aliasValue">moon11.mp</span>
+      <button class="alias-copy" id="copyAlias" type="button" aria-label="Copiar alias">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M208 0L332.1 0c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9L448 336c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48zM48 128l80 0 0 64-64 0 0 256 192 0 0-32 64 0 0 48c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 176c0-26.5 21.5-48 48-48z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="final">
+  <div class="content">
+    <div class="eyebrow">21 · 11 · 2026</div>
+    <h2 class="title">Te espero</h2>
+    <div class="orn">✦</div>
+
+    <div class="finalname">Morena</div>
+    <div class="finalxv">Mis XV</div>
+
+    <p class="copy">
+      Una noche para compartir, celebrar y guardar para siempre.
+    </p>
+
+    <div class="footer">El Molino Eventos · 21:30</div>
+  </div>
+</section>
+</main>
+
+<script src="script.js"></script>
+<script src="animation.js"></script>
+</body>
+</html>
